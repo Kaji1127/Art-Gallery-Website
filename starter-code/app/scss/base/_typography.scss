@@ -1,0 +1,16 @@
+@use 'utility' as *;
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.8rem;
+	font-family: var(--font-outfit);
+}
+
+.heading-primary {
+	font-family: var(--font-shoulder);
+	font-size: 6rem;
+	line-height: 0.917;
+}
