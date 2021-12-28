@@ -9,24 +9,24 @@ const browsersync = require('browser-sync').create();
 
 // Sass Task
 function scssTask() {
-	return src('app/scss/style.scss', { sourcemaps: true })
-		.pipe(sass())
-		.pipe(postcss([autoprefixer(), cssnano()]))
-		.pipe(dest('dist', { sourcemaps: '.' }));
+	return (
+		src('app/scss/style.scss', { sourcemaps: true })
+			.pipe(sass())
+			//postcssはautoprefixer, cssnanoなどをプラグインとして持っている
+			.pipe(postcss([autoprefixer(), cssnano()]))
+			// pipeされたものをファイルに書き出す
+			.pipe(dest('dist', { sourcemaps: '.' }))
+	);
 }
 
 // Browsersync
 function browserSyncServe(cb) {
 	browsersync.init({
 		server: {
+			// 基準とするディレクトリを指定
 			baseDir: '.',
 		},
-		notify: {
-			styles: {
-				top: 'auto',
-				bottom: '0',
-			},
-		},
+		notify: false,
 	});
 	cb();
 }
@@ -37,7 +37,9 @@ function browserSyncReload(cb) {
 
 // Watch Task
 function watchTask() {
+	// watch(監視するファイル, ファイルが更新された時に実行するタスク名)
 	watch('*.html', browserSyncReload);
+	// seriesは指定したものを順番に実行していく
 	watch(['app/scss/**/*.scss'], series(scssTask, browserSyncReload));
 }
 
