@@ -17,31 +17,33 @@
 	<body>
 		<main class="main">
 			<section class="hero">
-				<picture>
-					<source media="(min-width:62em)" srcset="./assets/desktop/image-hero.jpg, ./assets/desktop/image-hero@2x.jpg 2x" />
-					<source media="(min-width:48em)" srcset="./assets/tablet/image-hero.jpg, ./assets/tablet/image-hero@2x.jpg 2x" />
-					<img class="hero__img" src="./assets/mobile/image-hero.jpg" srcset="./assets/mobile/image-hero@2x.jpg 2x" alt="" />
-				</picture>
-				<div class="container">
-					<h1 class="heading-primary hero__title">
-						Modern<br />
-						Art Gallery
-					</h1>
+				<div class="hero__img">
+					<picture>
+						<source srcset="./assets/desktop/image-hero.jpg, ./assets/desktop/image-hero@2x.jpg 2x" media="(min-width: 64em)">
+						<source srcset="./assets/tablet/image-hero.jpg, ./assets/tablet/image-hero@2x.jpg 2x" media="(min-width: 47.9375em)">
+						<img class="hero__img-inner" src="./assets/mobile/image-hero.jpg" srcset="./assets/mobile/image-hero@2x.jpg 2x" alt="hero-image">
+					</picture>
+				</div>
+				<div class="hero__content">
+					<div class="hero__title">
+						<h1 class="heading-primary">
+							<span class="modern" data-split="MODERN">modern</span>
+							<span class="art-gallery" data-split="ART GALLERY">art gallery</span>
+						</h1>
+					</div>
 					<div class="hero__inner">
-						<p class="hero__description">
-							The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us
-							and find out.
-						</p>
+						<div class="hero__description">
+							<p class="description">The arts in the collection of the Modern Art Gallery all started from a spark of inspiration. Will these pieces inspire you? Visit us and find out.</p>
+						</div>
 						<button class="button">
-							<span class="button__text">Our location</span>
-							<span class="button__arrow"><img class="button__arrow-img" src="assets/icon-arrow-right.svg" alt="arrow-left"></span>
+							<span class="button-text">our location</span>
+							<span class="button-img"><img src="./assets/icon-arrow-right.svg" alt="arrow-right"></span>
 						</button>
 					</div>
 				</div>
 			</section>
+			<section class="gallery"></section>
+			<footer class="footer"></footer>
 		</main>
-		Your day at the gallery Wander through our distinct collections and find new insights about our artists. Dive into the details of their creative
-		process. Come &amp; be inspired We’re excited to welcome you to our gallery and see how our collections influence you. Modern Art Gallery The
-		Modern Art Gallery is free to all visitors and open seven days a week from 8am to 9pm. Find us at 99 King Street, Newport, USA.
 	</body>
 </html>
