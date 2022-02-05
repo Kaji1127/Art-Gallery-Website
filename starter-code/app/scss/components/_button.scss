@@ -1,24 +1,27 @@
+@use 'utility' as *;
+
 .button {
-	width: 26rem;
+	border: none;
 	display: flex;
 	height: 7.2rem;
-	border: none;
-	background-color: var(--black);
-	align-items: center;
 
-	&__text {
-		width: 20.4rem;
-		font-size: 2rem;
-		font-weight: bold;
-		font-family: var(--font-shoulder);
-		letter-spacing: 0.3rem;
-		text-transform: uppercase;
-		color: var(--white);
+	& span {
+		height: 100%;
 	}
 
-	&__arrow {
-		background-color: var(--gold);
-		height: 100%;
+	&-text {
+		width: 20.4rem;
+		padding: 2.1rem 0;
+		font-family: var(--font-shoulder);
+		text-transform: uppercase;
+		letter-spacing: 3.64px;
+		color: var(--white);
+		background-color: var(--black);
+	}
+
+	&-img {
+		width: 5.6rem;
 		padding: 2.4rem;
+		background-color: var(--gold);
 	}
 }
