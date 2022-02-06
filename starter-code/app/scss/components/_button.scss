@@ -4,6 +4,7 @@
 	border: none;
 	display: flex;
 	height: 7.2rem;
+	cursor: pointer;
 
 	& span {
 		height: 100%;
@@ -17,11 +18,25 @@
 		letter-spacing: 3.64px;
 		color: var(--white);
 		background-color: var(--black);
+		transition: 0.2s;
 	}
 
 	&-img {
 		width: 5.6rem;
 		padding: 2.4rem;
 		background-color: var(--gold);
+		transition: 0.2s;
+	}
+
+	&:hover {
+		.button {
+			&-text {
+				background-color: var(--gold);
+			}
+
+			&-img {
+				background-color: var(--black);
+			}
+		}
 	}
 }
