@@ -39,8 +39,14 @@ body {
 				top: 0;
 				left: 0;
 				color: white;
-				width: 49%;
+				width: 54.2%;
 				overflow: hidden;
+			}
+		}
+
+		@include breakpoint(desktop) {
+			&::before {
+				width: 49%;
 			}
 		}
 	}
@@ -56,8 +62,14 @@ body {
 				top: 0;
 				left: 0;
 				color: white;
-				width: 49%;
+				width: 54.2%;
 				overflow: hidden;
+			}
+		}
+
+		@include breakpoint(desktop) {
+			&::before {
+				width: 49%;
 			}
 		}
 	}
@@ -76,7 +88,12 @@ body {
 	font-size: 3.6rem;
 	@include fontStyle;
 
+	@include breakpoint(large) {
+		font-size: 5rem;
+	}
+
 	& span {
 		display: block;
+		white-space: nowrap;
 	}
 }

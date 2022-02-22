@@ -55,6 +55,10 @@
 		width: 100%;
 		overflow: hidden;
 		row-gap: 1.6rem;
+		grid-template-areas:
+			'a'
+			'b'
+			'c';
 
 		@include breakpoint(medium) {
 			grid-template-columns: 39.8rem 28rem;
@@ -78,6 +82,7 @@
 		}
 	}
 	&__img-2 {
+		width: 100%;
 		@include breakpoint(medium) {
 			grid-area: a;
 		}
@@ -105,10 +110,13 @@
 		color: var(--white);
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		row-gap: 2.4rem;
 
 		@include breakpoint(medium) {
 			grid-area: c;
+			padding-left: 2.8rem;
+			padding-right: 2.8rem;
 		}
 	}
 }
