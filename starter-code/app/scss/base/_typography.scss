@@ -1,1 +1,47 @@
 @use 'utility' as *;
+
+.heading-primary {
+	font-size: 6rem;
+	text-transform: uppercase;
+	font-family: var(--font-shoulder);
+
+	& span {
+		display: block;
+		line-height: 0.92;
+	}
+
+	@include breakpoint(medium) {
+		font-size: 7rem;
+	}
+}
+
+.heading-secondary {
+	font-size: 5rem;
+	text-transform: uppercase;
+	font-family: var(--font-shoulder);
+
+	& span {
+		display: block;
+		line-height: 0.92;
+	}
+}
+
+.heading-tertiary {
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	font-family: var(--font-shoulder);
+	color: var(--white);
+	& span {
+		display: block;
+		line-height: 0.92;
+	}
+}
+
+.description {
+	font-family: var(--font-outfit);
+	color: var(--gray);
+
+	&--white {
+		color: var(--white);
+	}
+}

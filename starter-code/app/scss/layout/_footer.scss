@@ -1,1 +1,37 @@
 @use 'utility' as *;
+
+.footer {
+	background-color: var(--black);
+	padding: 4.8rem 0;
+
+	&__container {
+		display: grid;
+		row-gap: 3.8rem;
+
+		@include breakpoint(medium) {
+			grid-template-columns: 11.5rem 1fr 10rem;
+			column-gap: 6.5rem;
+		}
+	}
+
+	&__description {
+		@include breakpoint(medium) {
+			margin-right: 5rem;
+		}
+	}
+}
+
+.sns {
+	display: flex;
+	column-gap: 2rem;
+
+	&__icon {
+		fill: var(--white);
+		cursor: pointer;
+		transition: all 0.4s;
+
+		&:hover {
+			fill: var(--gold);
+		}
+	}
+}

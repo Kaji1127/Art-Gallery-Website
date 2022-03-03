@@ -1,1 +1,42 @@
 @use 'utility' as *;
+
+.button {
+	text-decoration: none;
+	font-family: var(--font-shoulder);
+	color: var(--white);
+	background-color: var(--black);
+	position: relative;
+	width: 20.4rem;
+	height: 7.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2.4rem 0;
+	font-size: 2rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	transition: all 0.4s;
+
+	&::after {
+		content: url('../assets/icon-arrow-right.svg');
+		position: absolute;
+		top: 0;
+		left: 20.4rem;
+		width: 5.6rem;
+		height: 7.2rem;
+		padding-top: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--gold);
+		transition: all 0.4s;
+	}
+
+	&:hover {
+		background-color: var(--gold);
+
+		&::after {
+			background-color: var(--black);
+		}
+	}
+}
