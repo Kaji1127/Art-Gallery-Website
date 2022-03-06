@@ -41,6 +41,17 @@ body {
 		line-height: 0.92;
 	}
 
+	&--white {
+		color: var(--white);
+		line-height: 1.1;
+
+		@include breakpoint-down(medium) {
+			& span {
+				display: initial;
+			}
+		}
+	}
+
 	@include breakpoint(xlarge) {
 		font-size: 6rem;
 	}
@@ -55,10 +66,20 @@ body {
 		display: block;
 		line-height: 0.92;
 	}
+	&--black {
+		color: var(--black);
+	}
 
 	@include breakpoint(xlarge) {
 		font-size: 3.2rem;
 	}
+}
+
+.heading-fourth {
+	color: var(--gold);
+	font-size: 3.2rem;
+	font-family: var(--font-shoulder);
+	line-height: 1;
 }
 
 .description {
@@ -67,5 +88,9 @@ body {
 
 	&--white {
 		color: var(--white);
+	}
+
+	&--black {
+		color: var(--black);
 	}
 }

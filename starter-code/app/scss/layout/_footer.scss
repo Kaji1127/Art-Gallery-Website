@@ -4,6 +4,11 @@
 	background-color: var(--black);
 	padding: 4.8rem 0;
 
+	&--gold {
+		background-color: var(--gold);
+		color: var(--black);
+	}
+
 	@include breakpoint(large) {
 		padding: 8rem 0;
 	}
@@ -27,6 +32,7 @@
 			margin-right: 5rem;
 		}
 		@include breakpoint(xlarge) {
+			width: 43rem;
 			font-size: 1.8rem;
 		}
 	}
@@ -49,6 +55,18 @@
 
 		&:hover {
 			fill: var(--gold);
+		}
+	}
+
+	&--black {
+		& .sns__icon {
+			fill: var(--black);
+			cursor: pointer;
+			transition: all 0.4s;
+
+			&:hover {
+				fill: var(--white);
+			}
 		}
 	}
 }
