@@ -26,8 +26,8 @@ This is a solution to the [Art gallery website challenge on Frontend Mentor](htt
 
 ### Links
 
-- Solution URL: [リンク](https://your-solution-url.com)
-- Live Site URL: [リンク](https://your-live-site-url.com)
+- Solution URL: [リンク](https://github.com/Kaji1127/Art-Gallery-Website)
+- Live Site URL: [リンク](https://kaji1127.github.io/Art-Gallery-Website/)
 
 ## My process
 
